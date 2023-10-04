@@ -1,0 +1,13 @@
+fieldset {
+    background-color: rgb(238, 198, 240);
+    height: 300px;
+    width: 500px;
+    border-radius: 0px 30px 90px;
+}
+
+legend {
+    color: rgb(80, 7, 91);
+    border: 2px;
+    height: 20px;
+    border-style: solid;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            background-color: rgb(238, 198, 240);
+            height: 800px;
+            width: 800px;
+            border: 4px solid green;
+            margin: 0% auto;
+
+        }
+
+        .center {
+            margin: auto;
+            width: 50%;
+
+            padding: 20px;
+        }
+
+       table {
+
+            border-collapse: collapse;
+
+            width: 90%;
+
+            border: "2px";
+
+        }
+          th, td {
+
+            border: 2px solid black;
+
+            padding: 8px;
+
+            text-align: left;
+
+        }
+    </style>
+  
+
+</head>
+
+<body>
+    <fieldset>
+        <form class="center" id="signupForm"><!--action="LogingForm.html"onSubmit="return getdata(fname,lname,mobile,email,password,signupForm)"!_-->
+            <table>
+
+                <h1 textalign="left">Sign Up</h1>
+                <tr>
+                    <td>
+                        <label for="fname" align="left"><b> First Name</b></label><br/>
+                        <input type="text" name="fname" id="fname" placeholder="First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lname" align="left"><b>Last Name</b></label><br />
+                        <input type="text" name="lname" id="lname" placeholder="Last Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mob" align="left"><b>Mobile No</b> </label><br />
+                        <input type="tel" name="mobile" id="mobile" placeholder="Mobile No">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email" align="left"><b>Email</b></label><br />
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password" align="left"><b>Password</b></label><br />
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </td>
+                </tr>
+                <br />
+                <tr>
+                </br>
+                <tr>
+                    <td>
+                        <button type="submit" name="submit" id="submit" class="btn btn-default">Submit</button>
+                        <!--onclick="getdata(event)"-->
+                    </td>
+                </tr>
+
+            </table>
+         </form>
+    
+
+    <h1>Sign Up Details</h1>
+    <table id="userTable">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile No</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+        <tbody id="getUserTableData"> </tbody>
+
+    </table>
+
+<script src="Login.js"></script>
+</fieldset>
+</body>
+
+</html>

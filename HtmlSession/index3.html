@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="refresh" content="2"!-->
+    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+    <meta name="description" content="Free Web tutorials on HTML and CSS">
+    <meta name="author" content="Hege Refsnes">
+    <title>Document</title>
+
+    <style>
+        fieldset {
+            width: 50%;
+            border-radius: 10px;
+            background-color: rgb(167, 237, 237);
+            border-color: rgb(1, 1, 53);
+
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend> Progress bar Example</legend>
+        <progress value="60" max="100"></progress>
+        60%
+    </fieldset>
+    <br />
+
+    <fieldset>
+        <legend>Meter Example</legend>
+
+        50 of 100 <meter min="0" max="100" value="50"></meter>
+
+    </fieldset>
+    <br />
+
+    <fieldset>
+        <!--It showa list of data in text box-->
+        <legend> Data List Example</legend>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+
+            <option value="Internet Explo"></option>
+
+            <option value="Crome"></option>
+
+            <option value="firfox"></option>
+        </datalist> <br />
+
+        <!--for pattern matching-->
+        <form>
+            <legend>Pattern matching Example</legend>
+            Enter your name<input type="text" pattern="[a-zA-Z]*">
+            <input type="submit" value="click">
+        </form>
+    </fieldset>
+
+    <br />
+    <!--calculate value automaticaly while entering no-->
+    <fieldset>
+        <legend>calculate value automaticaly while entering no</legend>
+        <form oninput="o.value=a.value*b.value">
+            <input name="a" value="2" type="number"> x
+            <input name="b" value="3" type="number"> =
+            <output name="o">6</output>
+        </form>
+    </fieldset>
+    <br />
+
+    <select name="country">
+        <optgroup label="Africa">
+            <option value="gam">Gambia</option>
+            <option value="mad">Madagascar</option>
+            <option value="nam">Namibia</option>
+        </optgroup>
+        <optgroup label="India">
+            <option value="Mum">Mumbai</option>
+            <option value="che">Chennai</option>
+            <option value="bang">Bangalore</option>
+        </optgroup>
+    </select>
+
+
+    <form>
+        <p><a href="/index.php" accesskey="I"> Index Page </a></p>
+        <input type="text" accesskey="P" readonly>
+    </form>
+
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow>
+            <msup>
+                <mi>a</mi>
+                <mn>2</mn>
+            </msup>
+            <mo>+</mo>
+            <msup>
+                <mi>b</mi>
+                <mn>2</mn>
+            </msup>
+            <mo>=</mo>
+            <msup>
+                <mi>c</mi>
+                <mn>2</mn>
+            </msup>
+        </mrow>
+    </math>
+
+
+    <fieldset>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+                <mrow>
+                    <mrow>
+                        <mo>(</mo>
+                        <mi>f</mi>
+                        <mo>&#x2218;</mo>
+                        <mi>g</mi>
+                        <mo>)</mo>
+                    </mrow>
+                    <mo>&#x2061;</mo>
+                    <mfenced>
+                        <mi>x</mi>
+                    </mfenced>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>&#x2061;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>g</mi>
+                            <mo>&#x2061;</mo>
+                            <mfenced>
+                                <mi>x</mi>
+                            </mfenced>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+            </mrow>
+        </math>
+    </fieldset>
+
+    <fieldset>
+
+        <svg id="svgelem" height="200">
+            <!--Circule-->
+            <circle id="redcircle" cx="50" cy="50" r="50" fill="red" />
+        </svg>
+        <!--Rectangle-->
+        <svg id="svgelem" height="200">
+            <rect id="redrect" width="50" height="50" fill="green" />
+        </svg>
+        <!--Line-->
+        <svg id="svgelem" height="200">
+            <line x1="0" y1="0" x2="200" y2="100" style="stroke:red;stroke-width:2" />
+        </svg>
+
+        <svg id="svgelem" height="200">
+            <ellipse cx="100" cy="50" rx="100" ry="50" fill="red" />
+        </svg>
+
+        <svg id="svgelem" height="200">
+            <polygon points="20,10 300,20, 170,50" fill="red" />
+        </svg>
+
+        <svg id="svgelem" height="200">
+            <polyline points="0,0 0,20 20,20 20,40 40,40 40,60" fill="red" />
+        </svg>
+
+    </fieldset>
+
+    <fieldset>
+
+        <h2>HTML5 SVG Gradient Ellipse</h2>
+        <svg id="svgelem" height="200">
+            <defs>
+                <radialGradient id="gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                    <stop offset="0%" style="stop-color:rgb(200,200,200);
+          stop-opacity:0" />
+                    <stop offset="100%" style="stop-color:rgb(0,0,255);
+          stop-opacity:1" />
+                </radialGradient>
+            </defs>
+            <ellipse cx="100" cy="50" rx="100" ry="50" style="fill:url(#gradient)" />
+        </svg>
+
+    </fieldset>
+    
+</body>
+
+</html>

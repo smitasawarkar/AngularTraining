@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Shopping</title>
+    <script>
+        function calculateTotalDiscount() 
+        {
+            var product1Price = 1000;
+            var product2Price = 1200;
+            var product3Price = 600;
+            var product4Price = 800;
+            var product5Price = 1000;
+
+            var product1Quantity = parseInt(document.getElementById("product1Quantity").value);
+            var product2Quantity = parseInt(document.getElementById("product2Quantity").value);
+            var product3Quantity = parseInt(document.getElementById("product3Quantity").value);
+            var product4Quantity = parseInt(document.getElementById("product4Quantity").value);
+            var product5Quantity = parseInt(document.getElementById("product5Quantity").value);
+
+            var totalPrice = (product1Price * product1Quantity) + (product2Price * product2Quantity) + (product3Price * product3Quantity) + (product4Price * product4Quantity) + (product5Price * product5Quantity);
+
+            if (totalPrice > 1000) {
+
+                var discount = totalPrice * 0.1;
+                totalPrice -= discount;
+            }
+
+            document.getElementById("totalPrice").textContent = totalPrice.toFixed(2);
+
+
+
+        }
+    </script>
+
+     <style>
+        .container {
+            text-align: center;
+            margin: 0 auto;
+
+        }
+
+        .center-image {
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <form>
+        <legend class="center-image" style="background-color:rgb(212, 241, 107)">
+            <img id="top-image" src="C:/Users/smitas/Documents/ExternalSession/Assisment_Test/image/shopping1.jpg"
+                style="height:150px; width:800px;">
+        </legend>
+        <legend>
+            <table>
+                <h1
+                    style="font: size 25px;;background-color: aliceblue; font-style: italic;text-align: center;height: 50px;font-family: 'Times New Roman'; color: rgb(42, 5, 110);">
+                    Womens Clothing</h1>
+                <tr>
+                    <td><img id="top-image" src="C:/Users/smitas/Documents/ExternalSession/Assisment_Test/image/jeans.jpg"
+                            style="height:250px; width:250px;"></td>
+                    <td><img id="top-image" src="C:/Users/smitas/Documents/ExternalSession/Assisment_Test/image/suit.jpg"
+                            style="height:250px; width:250px;"></td>
+                    <td><img id="top-image" src="C:/Users/smitas/Documents/ExternalSession/Assisment_Test/image/top.jpg" style="height:250px; width:250px;">
+                    </td>
+                    <td><img id="top-image" src="C:/Users/smitas/Documents/ExternalSession/Assisment_Test/image/kurti.jpg"
+                            style="height:250px; width:230px;"></td>
+                    <td><img id="top-image" src="C:/Users/smitas/Documents/ExternalSession/Assisment_Test/image/saree.jpg"
+                            style="height:250px; width:250px;"></td>
+                </tr>
+                <tr
+                    style="font-size: 35px;background-color: aliceblue; font-style: italic;text-align: center;height: 50px;font-family: 'Times New Roman'; color: rgb(42, 5, 110);">
+                    <td>Jeans</td>
+                    <td>Suit</td>
+                    <td>Tops</td>
+                    <td>Kurti</td>
+                    <td>Saree</td>
+                </tr>
+                <tr
+                    style="font-size: 25px;background-color: rgb(127, 146, 10); font-style: italic;text-align: center;height: 50px;font-family: 'Times New Roman'; color:  rgb(42, 5, 110);">
+                    <td>Rs. 1000</td>
+                    <td>Rs. 1200</td>
+                    <td>Rs. 600</td>
+                    <td>Rs. 800</td>
+                    <td>Rs. 1000</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="product1Quantity" min="0" value="0"></td>
+                    <td><input type="number" id="product2Quantity" min="0" value="0"></td>
+                    <td><input type="number" id="product3Quantity" min="0" value="0"></td>
+                    <td><input type="number" id="product4Quantity" min="0" value="0"></td>
+                    <td><input type="number" id="product5Quantity" min="0" value="0"></td>
+                </tr>
+
+
+
+
+            </table>
+            <table>
+                <tr>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                </tr>
+            </table>
+        </legend>
+        <legend>
+            <table class="container">
+                <tr>
+                    <td>
+                        <button type="button" onclick="calculateTotalDiscount()"
+                            style="background-color: rgb(218, 214, 214); font-size: 35px">Total Cart Price</button>
+                    </td>
+                </tr>
+            </table>
+        </legend>
+        <legend>
+            <h2
+                style="font: size 25px;;background-color: aliceblue; font-style: italic;text-align: center;height: 50px;font-family: 'Times New Roman'; color: rgb(42, 5, 110);">
+                Total Price (Get with 10% Discount) Rs <span id="totalPrice">0.00</span></h2>
+        </legend>
+
+
+
+
+
+    </form>
+</body>
+
+
+
+</html>

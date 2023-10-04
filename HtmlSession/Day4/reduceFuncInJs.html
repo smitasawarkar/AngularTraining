@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            background-color: rgb(238, 198, 240);
+            height: 200px;
+            width: 400px;
+            border: 4px solid green;
+            margin: 0% auto;
+
+        }
+    </style>
+    <script>
+        //1]
+        //reduce
+        function sumOfArrayNum() {
+            let num = [5, 9, 12, 24, 67]
+
+            let sum = num.reduce(function (val, curValue) {
+                return val + curValue
+            }, 0)
+
+            console.log(sum)
+
+            var actualArray = " Actual-Array <br/> [5, 9, 12, 24, 67] <br/> Result sum of total number using Reduce method"
+            //console.log("Multidimentional array  :: "+newArray)
+            document.getElementById("ActualSingal-Array").innerHTML = actualArray;
+            document.getElementById("singal-dimensional").innerHTML = sum;
+        }
+    </script>
+    <!--------------------------------------------------------------------------------------------------->
+    <script>
+        //2]
+        function mixedArraySum() {
+            let initialValue = 0
+
+            let obj = [{ n: 5 }, { n: 9 }, { n: 13 }, { n: 25 }, { n: 40 }]
+
+            let sum1 = obj.reduce(function (accumulator, curValue) {
+
+                return accumulator + curValue.n
+
+            }, initialValue)
+
+            //console.log(sum1)
+
+            var actualArray = " Actual-Array <br/> [{ n: 5 }, { n: 9 }, { n: 13 }, { n: 25 }, { n: 40 }] <br/> Result "
+            //console.log("Multidimentional array  :: "+newArray)
+            document.getElementById("ActualMixed-Array").innerHTML = actualArray;
+            document.getElementById("mixedArray").innerHTML = sum1;
+        }
+    </script>
+    <!------------------------------------------------------------------------------------>
+    <script>
+
+        //3] 
+        function MultiDimensionalArray() {
+            let mulArray = [[3, 5], [1, 7], [12, 9]]
+
+            let newArray = mulArray.reduce(function (accumulator, curValue) {
+
+                return accumulator.concat(curValue)
+
+            }, []
+
+            )
+            var actualArray = " Actual-Array <br/> [[3, 5], [1, 7], [12, 9]]<br/> Result using Reduce method"
+            //console.log("Multidimentional array  :: "+newArray)
+            document.getElementById("ActualMultiDimensional-Array").innerHTML = actualArray;
+            document.getElementById("Multi-dimensional").innerHTML = newArray;
+        }
+
+        //4]
+        let myCars = ['Mercedes-Benz', 'Jeep', 'Ferrari', 'Lamborghini', 'Mercedes-Benz', 'BMW', 'Ferrari']
+
+        let instances = myCars.reduce(function (allCars, car) {
+
+            if (car in allCars) {
+
+                allCars[car]++
+
+            }
+
+            else {
+
+                allCars[car] = 1
+
+            }
+
+            return allCars
+
+        }, {})
+
+        console.log(instances)
+    </script>
+
+</head>
+
+<body>
+    <fieldset>
+
+        <legend>
+            <h1>Singal-dimensional-arr</h1>
+        </legend>
+        <button onclick="sumOfArrayNum()">SingalDimensionalArray_Result </button>
+        <div id="ActualSingal-Array"></div>
+        <div id="singal-dimensional"></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h1>Mixed-arr</h1>
+        </legend>
+        <button onclick="mixedArraySum()">Mixed_Array_Result </button>
+        <div id="ActualMixed-Array"></div>
+        <div id="mixedArray"></div>
+    </fieldset>
+
+    <fieldset>
+
+        <legend>
+            <h1>Multi-dimensional-arr</h1>
+        </legend>
+        <button onclick="MultiDimensionalArray()">MultiDimensionalArray_Result </button>
+        <div id="ActualMultiDimensional-Array"></div>
+        <div id="Multi-dimensional"></div>
+    </fieldset>
+</body>
+
+</html>
+
+<!-- 
+4] let myCars = ['Mercedes-Benz', 'Jeep', 'Ferrari', 'Lamborghini', 'Mercedes-Benz', 'BMW', 'Ferrari']
+
+let instances = myCars.reduce(function (allCars, car) {
+
+  if (car in allCars) {
+
+    allCars[car]++
+
+  }
+
+  else {
+
+    allCars[car] = 1
+
+  }
+
+  return allCars
+
+}, {})
+
+console.log(instances)
+
+
+
+5] Example 5: Grouping Objects With Array Reduce in JavaScript
+This example groups objects based on a property value using the JavaScript array reduce method.
+
+let student = [
+
+  { name: 'David', age: 23, hobby: 'fishing' },
+
+  { name: 'Rachel', age: 25, hobby: 'cooking' },
+
+  { name: 'Rahul', age: 22, hobby: 'fishing' }
+
+];
+
+function myFunc(obj, prop) {
+
+  return obj.reduce(function (acc, item) {
+
+    let key = item[prop]
+
+    if (!acc[key]) {
+
+      acc[key] = []
+
+    }
+
+    acc[key].push(item)
+
+    return acc
+
+  }, {})
+
+}
+
+let groupedStudent = myFunc(student, 'hobby')
+
+console.log(groupedStudent)
+
+
+6] Example 6: Removing Duplicates With Array Reduce
+For this example, we will create an array with multiple recurring values and then use the array reduce in JavaScript to eliminate those repeating values.
+
+let array = [2, 5, 7, 5, 12, 9, 7, 5, 4, 3, 5, 2, 4, 15]
+
+let newArray = array.reduce(function (accumulator, curValue) {
+
+  if (accumulator.indexOf(curValue) === -1) {
+
+    accumulator.push(curValue)
+
+  }
+
+  return accumulator
+
+}, [])
+
+console.log(newArray)
+
+ -->
