@@ -1,0 +1,31 @@
+<html>
+  <body>
+
+  <!-- <fieldset>
+ 
+  <legend> Component</legend>
+ 
+  <p>welcome to {{title}}</p>
+  <p>counter values={{counter}}</p>
+  <button (click)="increment()">Increment </button>
+
+  <br><br>
+  <button (click)="dec()">decrement </button>
+ 
+ <app-child [myCount]=counter></app-child>
+ 
+  </fieldset>
+  <fieldset>
+    <legend>Child To Parent Example</legend>
+    <h1>welcome To {{title}}</h1>
+  </fieldset> -->
+
+
+  <fieldset>
+    <legend>Child To Parent Example</legend>
+    <h1>Welcome to {{title}}!</h1>
+    <p> current count is {{Counter}} </p>
+    <app-child-to-parent [count]=Counter (countChanged)="countChangedHandler($event)"></app-child-to-parent>
+</fieldset>
+</body>
+</html>

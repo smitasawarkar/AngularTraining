@@ -1,0 +1,38 @@
+
+<fieldset>
+    <legend>Child Component</legend>
+
+    <h1>This is child component </h1>
+
+
+    <table border="3px">
+        <tr>
+            <td>Enter your first name</td>
+            <td><input type="text" [(ngModel)]="fName" /></td>
+        </tr>
+        <tr>
+            <td>Enter your last name</td>
+            <td><input type="text" [(ngModel)]="lName" /></td>
+        </tr>
+        <tr>
+            <td>Enter your email</td>
+            <td><input type="text" [(ngModel)]="email" /></td>
+        </tr>
+
+    </table>
+
+
+
+
+    <table border="2px">
+        <tr>
+            <td>{{fName}}</td>
+            <td>{{lName}}</td>
+            <td>{{email}}</td>
+
+        </tr>
+
+    </table>
+
+</fieldset>
+

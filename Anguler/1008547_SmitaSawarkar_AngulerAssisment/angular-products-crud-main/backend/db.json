@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "Iphone13",
+      "price": "70000.0"
+    },
+    {
+      "id": 3,
+      "name": "Iphone14",
+      "price": "8020.89"
+    },
+    {
+      "name": "Iphone15",
+      "price": "100000.0",
+      "id": 4
+    },
+    {
+      "name": "devyani",
+      "price": "5.7",
+      "id": 5
+    },
+    {
+      "name": "Iphone12",
+      "price": "650000.9",
+      "id": 6
+    }
+  ]
+}
