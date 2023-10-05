@@ -1,0 +1,17 @@
+[
+    {
+        "empId":101,
+        "name":"smita",
+        "salary":700000
+    },
+    {
+        "empId":102,
+        "name":"Sakshi",
+        "salary":900000
+    },
+    {
+        "empId":103,
+        "name":"Amrita",
+        "salary":200000
+    }
+]
