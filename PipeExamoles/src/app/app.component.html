@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <h1>Root Component App</h1>
+    <div>
+        <h4>{{title}}</h4>
+       
+        <fieldset>
+            <legend>number Pipe Example</legend>
+            <app-number-pipe></app-number-pipe>
+        </fieldset>
+        <fieldset>
+            <legend>slice Pipe Example</legend>
+            <app-slice-pipe></app-slice-pipe>
+        </fieldset>
+         <fieldset>
+            <legend>Json Pipe Example</legend>
+            <app-jsonpipe></app-jsonpipe>
+        </fieldset>
+        
+       <fieldset>
+            <legend>Custom Pipe</legend>
+            <h1>{{title|reverseStr}}</h1>
+        </fieldset>
+
+        <fieldset>
+            <legend>HTTP Example</legend>
+            <app-httpexample></app-httpexample>
+        </fieldset>
+        
+        
+        
+    </div>
+
+
+</body>
+
+</html>
+
+
+
